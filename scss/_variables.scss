@@ -1,0 +1,8 @@
+$fs-html: 16;
+
+@mixin font($font-family, $font-size, $font-weight, $color) {
+	font-family: $font-family;
+	font-size: $font-size/$fs-html + rem;
+	font-weight: $font-weight;
+	color: $color;
+}
