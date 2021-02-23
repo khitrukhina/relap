@@ -1,5 +1,6 @@
 @import "_variables";
 @import "banner";
+@import "facts";
 
 * {
   box-sizing: border-box;
@@ -47,8 +48,8 @@ ul {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	/*padding-left: 15px;
-	padding-right: 15px;*/
+	padding-left: 15px;
+	padding-right: 15px;
 	overflow: hidden;
 
 	@media (min-width: 576px) {

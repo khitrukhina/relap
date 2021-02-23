@@ -61,9 +61,9 @@
 			transition: transform .3s linear;
 
 			@media (min-width: 476px) {
-				margin: 0 10px 0 0;
-				align-self: flex-start;
+				margin: 0 25px 0 0;
 			}
+
 
 			&:hover {
 				transform: scale(1.1);
@@ -77,7 +77,6 @@
 
 			@media (min-width: 476px) {
 				flex-direction: row-reverse;
-				align-items: unset;
 				justify-content: flex-start;
 			}
 
@@ -96,7 +95,23 @@
 			}
 
 			#menu__toggle:checked ~ .header__list {
-				display: block;
+				top: 70px;
+
+				@media (max-width: 476px) {
+					top: 200px;
+				}
+			}
+
+			#menu__toggle:checked ~ .header__menu-icon {
+				@media (min-width: 476px) {
+					align-self: flex-start;
+				}
+			}
+
+			#menu__toggle:checked ~ .menu__btn {
+				@media (min-width: 476px) {
+					align-self: flex-start;
+				}
 			}
 
 			.menu__btn {
@@ -134,7 +149,8 @@
 			}
 
 			.header__list {
-				display: none;
+				position: absolute;
+				top: -100%;
 				padding: 20px 0;
 				margin-top: 30px;
 				margin-right: 10px;
@@ -143,11 +159,12 @@
 				box-shadow: 0 0 5px 5px silver;
 				background: rgb(163,91,206);
 
-				@media (min-width: 476px) {
+				@media (min-width: 477px) {
 					width: 200px;
 				}
 
 				@media (min-width: 992px) {
+					position: static;
 					display: flex;
 					align-items: center;
 					justify-content: space-around;
@@ -183,6 +200,65 @@
 					}
 				}
 			}
+		}
+	}
+
+	&__button {
+		width: 170px;
+		height: 48px;
+		border-color: rgba(255, 255, 255, .6);
+		border-radius: 24px;
+		@include font("SourceSansPro-Regular", 16, 600, white);
+		transition: all .2s linear;
+
+		@media (min-width: 992px) {
+			margin-left: 10px;
+		}
+
+		&:hover {
+			background: #FFC300;
+			color: white;
+			border-color: transparent;
+		}
+	}
+}
+
+.banner__content {
+	margin-top: 100px;
+
+	@media (min-width: 768px) {
+		margin-top: 170px;
+	}
+
+	&-top {
+		text-transform: uppercase;
+		@include font("Poppins-Bold", 16, 500, white);
+	}
+
+	&-title {
+		margin: 23px 0;
+		@include font("Poppins-Bold", 30, 700, white);
+
+		@media (min-width: 576px) {
+			@include font("Poppins-Bold", 56, 700, white);
+		}
+	}
+
+	&-button {
+		width: 170px;
+		height: 48px;
+		margin-bottom: 5px;
+		background: #FFC300;
+		border-radius: 24px;
+		border-color: transparent;
+		@include font("SourceSansPro-Regular", 16, 600, white);
+		transition: all .2s linear;
+
+		&:hover {
+			background: transparent;
+			color: white;
+			border-color: rgba(255, 255, 255, .6);
+			transform: scale(1.05);
 		}
 	}
 }

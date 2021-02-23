@@ -1,0 +1,24 @@
+.facts__wrapper {
+	background: #FDF2FF;
+}
+
+.facts {
+	cursor: default;
+	
+	&__item {
+		padding: 100px 30px;
+
+		@media (min-width: 768px) {
+			padding: 100px 10px;
+		}
+
+		&Number {
+			margin: 20px 0;
+			@include font("Poppins-Bold", 40, 700, #333333);
+		}
+
+		&Text {
+			@include font("SourceSansPro-Regular", 16, 400, rgba(0 ,0 ,0 ,.5));
+		}
+	}
+}
