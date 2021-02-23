@@ -1,6 +1,6 @@
 .banner__wrapper {
 	padding: 30px;
-	background: url("../images/banner.png") right bottom no-repeat, linear-gradient(to left bottom, rgb(76,49,182), rgb(163,91,206));
+	background: url("../images/banner.png") 65% bottom no-repeat, linear-gradient(to left bottom, $c-purple, $c-blue);
 	height: 768px;
 }
 
@@ -13,11 +13,6 @@
 	justify-content: space-between;
 	align-items: center;
 	text-align: center;
-
-	@media (max-width: 476px) {
-		display: block;
-		width: 100%;
-	}
 	
 
 	&__logo {
@@ -27,9 +22,6 @@
 		text-transform: uppercase;
 		@include font("Poppins-Bold", 25, 700, white);
 
-		@media (max-width: 476px) {
-			display: block;
-		}
 
 		@media (min-width: 768px) {
 			@include font("Poppins-Bold", 40, 700, white);
@@ -43,27 +35,17 @@
 
 	&__menu {
 		display: flex;
-		flex-direction: column;
 		padding: 15px;
 		@include font("SourceSansPro-Regular", 16, 600, white);
-
-		@media (min-width: 476px) {
-			flex-direction: row;
-		}
 
 		@media (min-width: 992px) {
 			padding: 0;
 		}
 
 		&-icon {
-			margin-top: 10px;
+			margin-right: 25px;
 			font-size: 24px;
 			transition: transform .3s linear;
-
-			@media (min-width: 476px) {
-				margin: 0 25px 0 0;
-			}
-
 
 			&:hover {
 				transform: scale(1.1);
@@ -72,13 +54,9 @@
 
 		&Wrapper {
 			display: flex;
-			flex-direction: column;
 			align-items: center;
-
-			@media (min-width: 476px) {
-				flex-direction: row-reverse;
-				justify-content: flex-start;
-			}
+			flex-direction: row-reverse;
+			justify-content: flex-start;
 
 			#menu__toggle:checked ~ .menu__btn > span {
 				transform: rotate(45deg);
@@ -98,7 +76,7 @@
 				top: 70px;
 
 				@media (max-width: 476px) {
-					top: 200px;
+					top: 100px;
 				}
 			}
 
@@ -157,7 +135,7 @@
 				width: 250px;
 				border-radius: 20px;
 				box-shadow: 0 0 5px 5px silver;
-				background: rgb(163,91,206);
+				background: $c-purple;
 
 				@media (min-width: 477px) {
 					width: 200px;
@@ -190,7 +168,7 @@
 
 
 						&:hover {
-							background-color: rgb(76,49,182);
+							background-color: $c-blue;
 
 							@media (min-width: 992px) {
 								background-color: unset;
@@ -216,7 +194,7 @@
 		}
 
 		&:hover {
-			background: #FFC300;
+			background: $c-orange;
 			color: white;
 			border-color: transparent;
 		}
@@ -248,7 +226,7 @@
 		width: 170px;
 		height: 48px;
 		margin-bottom: 5px;
-		background: #FFC300;
+		background: $c-orange;
 		border-radius: 24px;
 		border-color: transparent;
 		@include font("SourceSansPro-Regular", 16, 600, white);
