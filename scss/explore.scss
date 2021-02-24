@@ -1,0 +1,122 @@
+.explore__wrapper {
+	display: flex;
+	flex-direction: column;
+	padding-top: 50px;
+	min-height: 500px;
+	overflow: hidden;
+
+	@media (min-width: 768px) {
+		min-height: 450px;
+	}
+}
+
+.explore__block {
+	align-self: flex-end;
+	min-height: 450px;
+	width: 100%;
+	background: #3023AE;
+	position: relative;
+
+	@media (min-width: 768px) {
+		min-height: 400px;
+	}
+}
+
+.circle {
+	background: linear-gradient(to left bottom, $c-purple, $c-blue);
+	border-radius: 50%;
+	position: absolute;
+
+	&_small {
+		width: 100px;
+		height: 100px;
+		right: 40%;
+		top: -48px;
+	}
+
+	&_medium {
+		width: 140px;
+		height: 140px;
+		left: -59px;
+		bottom: -69px;
+	}
+
+	&_big {
+		width: 323px;
+		height: 323px;
+		left: 65%;
+		bottom: -22%;
+		z-index: 0;
+	}
+}
+
+.explore {
+	padding: 90px 0 80px;
+	flex-direction: column;
+
+	@media (min-width: 769px) {
+		flex-direction: row;
+	}
+
+	&__text {
+		@media (max-width: 476px) {
+			padding: 0 15px;
+		}
+
+		&Top {
+			text-transform: uppercase;
+			@include font("Poppins-Bold", 16, 500, white);
+		}
+
+		&Main {
+			margin-top: 18px;
+			word-break: break-word;
+			
+			@include font("Poppins-Bold", 30, 700, white);
+
+			@media (min-width: 476px) {
+				@include font("Poppins-Bold", 40, 700, white);
+			}
+
+			@media (min-width: 768px) {
+				@include font("Poppins-Bold", 56, 700, white);
+			}
+		}
+	}
+
+	&__buttonWrapper {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+
+		@media (min-width: 768px) {
+			justify-content: flex-end;
+		}
+
+		.explore__button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 1;
+			margin-top: 40px;
+			width: 170px;
+			height: 48px;
+			background: $c-orange;
+			border-radius: 24px;
+			border-color: transparent;
+			@include font("SourceSansPro-Regular", 16, 700, white);
+			transition: all .2s linear;
+
+			@media (min-width: 768px) {
+				margin: 0;
+			}
+
+			&:hover {
+				background: transparent;
+				color: white;
+				border-color: rgba(255, 255, 255, .6);
+				transform: scale(1.05);
+			}
+		}
+	}
+}

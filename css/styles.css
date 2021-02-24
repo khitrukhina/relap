@@ -275,8 +275,296 @@
   color: rgba(0, 0, 0, 0.5);
 }
 
+.sneakers {
+  padding: 50px 0;
+  justify-content: space-between;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .sneakers {
+    flex-direction: row;
+    padding: 150px 0;
+  }
+}
+.sneakers__info {
+  margin-bottom: 48px;
+  padding: 15px;
+}
+@media (min-width: 768px) {
+  .sneakers__info {
+    margin-bottom: 0;
+  }
+}
+.sneakers__infoTop {
+  margin-top: 18px;
+  text-transform: uppercase;
+  font-family: "Poppins-Bold";
+  font-size: 1rem;
+  font-weight: 700;
+  color: black;
+}
+.sneakers__infoTitle {
+  font-family: "Poppins-Bold";
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: black;
+}
+@media (min-width: 577px) {
+  .sneakers__infoTitle {
+    font-family: "Poppins-Bold";
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: black;
+  }
+}
+.sneakers__infoText {
+  margin: 39px 0 25px 0;
+  font-family: "SourceSansPro-Regular";
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+}
+.sneakers__infoButton {
+  width: 170px;
+  height: 48px;
+  margin-bottom: 5px;
+  background: #AC60D0;
+  border-radius: 24px;
+  border-color: transparent;
+  font-family: "SourceSansPro-Regular";
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  transition: all 0.2s linear;
+}
+.sneakers__infoButton:hover {
+  background: transparent;
+  color: #AC60D0;
+  border-color: #AC60D0;
+  transform: scale(1.05);
+}
+.sneakers__product {
+  display: flex;
+  align-self: flex-end;
+  flex-direction: column;
+  width: 315px;
+  padding: 0;
+  margin-right: 15px;
+  background: linear-gradient(to left bottom, #AC60D0, #3927B0);
+}
+@media (min-width: 576px) {
+  .sneakers__product {
+    margin-right: 0;
+    align-self: center;
+    width: 380px;
+  }
+}
+@media (min-width: 768px) {
+  .sneakers__product {
+    margin-right: 0;
+    width: 450px;
+  }
+}
+@media (min-width: 992px) {
+  .sneakers__product {
+    width: 470px;
+  }
+}
+@media (min-width: 1200px) {
+  .sneakers__product {
+    flex-direction: row;
+    width: 740px;
+  }
+}
+.sneakers__productImage {
+  transition: transform 0.3s linear;
+  align-self: flex-end;
+  flex: 0 0 315px;
+}
+@media (min-width: 576px) {
+  .sneakers__productImage {
+    flex: 0 0 380px;
+  }
+}
+@media (min-width: 768px) {
+  .sneakers__productImage {
+    flex: 0 0 450px;
+  }
+}
+@media (min-width: 992px) {
+  .sneakers__productImage {
+    flex: 0 0 470px;
+  }
+}
+@media (min-width: 375px) {
+  .sneakers__productImage:hover {
+    transform: translate(-30px, -30px);
+  }
+}
+@media (min-width: 576px) {
+  .sneakers__productImage:hover {
+    transform: translate(-30px, -30px);
+  }
+}
+.sneakers__productDesc {
+  padding: 23px;
+}
+.sneakers__productDescTitle {
+  line-height: 48px;
+  font-family: "Poppins-Bold";
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: white;
+}
+.sneakers__productDescText {
+  margin-top: 24px;
+  font-family: "SourceSansPro-Regular";
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.explore__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  min-height: 500px;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .explore__wrapper {
+    min-height: 450px;
+  }
+}
+
+.explore__block {
+  align-self: flex-end;
+  min-height: 450px;
+  width: 100%;
+  background: #3023AE;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .explore__block {
+    min-height: 400px;
+  }
+}
+
+.circle {
+  background: linear-gradient(to left bottom, #AC60D0, #3927B0);
+  border-radius: 50%;
+  position: absolute;
+}
+.circle_small {
+  width: 100px;
+  height: 100px;
+  right: 40%;
+  top: -48px;
+}
+.circle_medium {
+  width: 140px;
+  height: 140px;
+  left: -59px;
+  bottom: -69px;
+}
+.circle_big {
+  width: 323px;
+  height: 323px;
+  left: 65%;
+  bottom: -22%;
+  z-index: 0;
+}
+
+.explore {
+  padding: 90px 0 80px;
+  flex-direction: column;
+}
+@media (min-width: 769px) {
+  .explore {
+    flex-direction: row;
+  }
+}
+@media (max-width: 476px) {
+  .explore__text {
+    padding: 0 15px;
+  }
+}
+.explore__textTop {
+  text-transform: uppercase;
+  font-family: "Poppins-Bold";
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+}
+.explore__textMain {
+  margin-top: 18px;
+  word-break: break-word;
+  font-family: "Poppins-Bold";
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: white;
+}
+@media (min-width: 476px) {
+  .explore__textMain {
+    font-family: "Poppins-Bold";
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+  }
+}
+@media (min-width: 768px) {
+  .explore__textMain {
+    font-family: "Poppins-Bold";
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+  }
+}
+.explore__buttonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+@media (min-width: 768px) {
+  .explore__buttonWrapper {
+    justify-content: flex-end;
+  }
+}
+.explore__buttonWrapper .explore__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  margin-top: 40px;
+  width: 170px;
+  height: 48px;
+  background: #FFC300;
+  border-radius: 24px;
+  border-color: transparent;
+  font-family: "SourceSansPro-Regular";
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  transition: all 0.2s linear;
+}
+@media (min-width: 768px) {
+  .explore__buttonWrapper .explore__button {
+    margin: 0;
+  }
+}
+.explore__buttonWrapper .explore__button:hover {
+  background: transparent;
+  color: white;
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.05);
+}
+
 * {
   box-sizing: border-box;
+}
+
+.container {
+  min-height: 100%;
 }
 
 body {

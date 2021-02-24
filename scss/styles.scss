@@ -1,9 +1,15 @@
 @import "_variables";
 @import "banner";
 @import "facts";
+@import "sneakers";
+@import "explore";
 
 * {
   box-sizing: border-box;
+}
+
+.container {
+	min-height: 100%;
 }
 
 body{
