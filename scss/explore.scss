@@ -1,6 +1,4 @@
 .explore__wrapper {
-	display: flex;
-	flex-direction: column;
 	padding-top: 50px;
 	min-height: 500px;
 	overflow: hidden;
@@ -11,7 +9,6 @@
 }
 
 .explore__block {
-	align-self: flex-end;
 	min-height: 450px;
 	width: 100%;
 	background: #3023AE;
