@@ -556,6 +556,110 @@
   transform: scale(1.05);
 }
 
+.products {
+  padding: 80px 0;
+}
+.products__text {
+  margin-bottom: 57px;
+  text-align: center;
+}
+.products__textTop {
+  text-transform: uppercase;
+  font-family: "Poppins-Bold";
+  font-size: 1rem;
+  font-weight: 700;
+  color: black;
+}
+.products__textMain {
+  font-family: "Poppins-Bold";
+  font-size: 2.1875rem;
+  font-weight: 700;
+  color: black;
+}
+@media (min-width: 768px) {
+  .products__textMain {
+    font-family: "Poppins-Bold";
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: black;
+  }
+}
+.products__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .products__content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.products__contentItem {
+  width: 345px;
+  margin-bottom: 35px;
+}
+@media (min-width: 768px) {
+  .products__contentItem {
+    width: 30%;
+    margin-bottom: 0;
+  }
+}
+.products__contentItemImage {
+  max-width: 100%;
+  transition: transform 0.3s linear;
+}
+@media (min-width: 370px) {
+  .products__contentItemImage:hover {
+    transform: scale(1.05);
+  }
+}
+.products__contentItemInfo {
+  margin-top: 37px;
+  display: flex;
+}
+.products__contentItemInfoIcon {
+  padding-top: 10px;
+  flex-basis: 30%;
+}
+.products__contentItemInfoText {
+  padding: 0 15px;
+}
+.products__contentItemInfoTextTitle {
+  font-family: "Poppins-Bold";
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: black;
+}
+.products__contentItemInfoTextMain {
+  margin: 10px 0 20px;
+  font-family: "SourceSansPro-Regular";
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+}
+.products__button {
+  text-align: center;
+}
+.products__buttonItem {
+  width: 170px;
+  height: 48px;
+  border-color: #AC60D0;
+  border-radius: 24px;
+  background: transparent;
+  font-family: "SourceSansPro-Regular";
+  font-size: 1rem;
+  font-weight: 700;
+  color: #AC60D0;
+  transition: all 0.2s linear;
+}
+.products__buttonItem:hover {
+  background: #AC60D0;
+  color: white;
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.05);
+}
+
 * {
   box-sizing: border-box;
 }
