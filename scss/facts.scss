@@ -1,0 +1,21 @@
+.facts__wrapper {
+	background: #FDF2FF;
+}
+
+.facts {
+	cursor: default;
+	justify-content: center;
+	
+	&__item {
+		padding: 100px 0;
+
+		&Number {
+			margin: 20px 0;
+			@include font("Poppins-Bold", 40, 700, #333333);
+		}
+
+		&Text {
+			@include font("SourceSansPro-Regular", 16, 400, rgba(0 ,0 ,0 ,.5));
+		}
+	}
+}

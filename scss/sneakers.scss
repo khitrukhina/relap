@@ -1,0 +1,117 @@
+.sneakers {
+	padding: 50px 0;
+	justify-content: space-between;
+	flex-direction: column;
+
+	@media (min-width: 768px) {
+		flex-direction: row;
+		padding: 150px 0;
+	}
+
+	&__info {
+		margin-bottom: 48px;
+
+			@media (min-width: 768px) {
+				margin-bottom: 0;
+			}
+
+		&Top {
+			margin-top: 18px;
+			text-transform: uppercase;
+			@include font("Poppins-Bold", 16, 700, black);
+		}
+
+		&Title {
+			@include font("Poppins-Bold", 40, 700, black);
+
+			@media (min-width: 577px) {
+				@include font("Poppins-Bold", 56, 700, black);
+			}
+		}
+
+		&Text {
+			margin: 39px 0 25px 0;
+			@include font("SourceSansPro-Regular", 16, 600, black);
+		}
+
+		&Button {
+			margin-bottom: 5px;
+			background: $c-purple;
+			border-color: transparent;
+			@include font("SourceSansPro-Regular", 16, 700, white);
+			@extend %button;
+
+			&:hover {
+				background: transparent;
+				color: $c-purple;
+				border-color: $c-purple;
+				transform: scale(1.05);
+			}
+		}
+	}
+
+	&__productWrapper {
+		display: flex;
+		align-self: flex-end;
+
+		@media (min-width: 576px) {
+			align-self: center;
+		}
+	}
+
+	&__product {
+		display: flex;
+		flex-direction: column;
+		margin-right: 15px;
+		background: linear-gradient(to left bottom, $c-purple, $c-blue);
+
+		@media (min-width: 576px) {
+			margin-right: 0;
+		}
+
+		@media (min-width: 1200px) {
+			flex-direction: row;
+		}
+
+		&Image {
+			transition: transform .3s linear;
+			transform: translate(-30px, -30px);
+
+			@media (min-width: 375px) {
+				transform: none;
+			}
+
+			@media (min-width: 992px) {
+				flex: 0 0 470px;
+			}
+
+			&:hover {
+				@media (min-width: 375px) {
+					transform: translate(-30px, -30px);
+				}
+			}
+
+			& img {
+				width: 100%;
+			}
+		}
+
+		&Desc {
+			padding: 25px;
+
+			@media (min-width: 1200px) {
+				padding: 25px 25px 0px 25px;
+			}
+
+			&Title {
+				line-height: 48px;
+				@include font("Poppins-Bold", 30, 700, white);
+			}
+
+			&Text {
+				margin-top: 24px;
+				@include font("SourceSansPro-Regular", 16, 400, rgba(255 ,255 ,255 ,.5));
+			}
+		}
+	}
+}

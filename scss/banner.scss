@@ -1,6 +1,6 @@
 .banner__wrapper {
 	padding: 30px;
-	background: url("../images/banner.png") right bottom no-repeat, linear-gradient(to left bottom, rgb(76,49,182), rgb(163,91,206));
+	background: url("../images/banner.png") 65% bottom no-repeat, linear-gradient(to left bottom, $c-purple, $c-blue);
 	height: 768px;
 }
 
@@ -13,11 +13,6 @@
 	justify-content: space-between;
 	align-items: center;
 	text-align: center;
-
-	@media (max-width: 476px) {
-		display: block;
-		width: 100%;
-	}
 	
 
 	&__logo {
@@ -27,9 +22,6 @@
 		text-transform: uppercase;
 		@include font("Poppins-Bold", 25, 700, white);
 
-		@media (max-width: 476px) {
-			display: block;
-		}
 
 		@media (min-width: 768px) {
 			@include font("Poppins-Bold", 40, 700, white);
@@ -43,27 +35,17 @@
 
 	&__menu {
 		display: flex;
-		flex-direction: column;
 		padding: 15px;
 		@include font("SourceSansPro-Regular", 16, 600, white);
-
-		@media (min-width: 476px) {
-			flex-direction: row;
-		}
 
 		@media (min-width: 992px) {
 			padding: 0;
 		}
 
 		&-icon {
-			margin-top: 10px;
+			margin-right: 25px;
 			font-size: 24px;
 			transition: transform .3s linear;
-
-			@media (min-width: 476px) {
-				margin: 0 10px 0 0;
-				align-self: flex-start;
-			}
 
 			&:hover {
 				transform: scale(1.1);
@@ -72,14 +54,9 @@
 
 		&Wrapper {
 			display: flex;
-			flex-direction: column;
 			align-items: center;
-
-			@media (min-width: 476px) {
-				flex-direction: row-reverse;
-				align-items: unset;
-				justify-content: flex-start;
-			}
+			flex-direction: row-reverse;
+			justify-content: flex-start;
 
 			#menu__toggle:checked ~ .menu__btn > span {
 				transform: rotate(45deg);
@@ -96,7 +73,23 @@
 			}
 
 			#menu__toggle:checked ~ .header__list {
-				display: block;
+				top: 70px;
+
+				@media (max-width: 476px) {
+					top: 100px;
+				}
+			}
+
+			#menu__toggle:checked ~ .header__menu-icon {
+				@media (min-width: 476px) {
+					align-self: flex-start;
+				}
+			}
+
+			#menu__toggle:checked ~ .menu__btn {
+				@media (min-width: 476px) {
+					align-self: flex-start;
+				}
 			}
 
 			.menu__btn {
@@ -119,7 +112,7 @@
 					width: 100%;
 					height: 2px;
 					background-color: white;
-					transition: all .3s linear;
+					transition: .3s linear;
 				}
 
 				& > span::before {
@@ -134,20 +127,22 @@
 			}
 
 			.header__list {
-				display: none;
+				position: absolute;
+				top: -100%;
 				padding: 20px 0;
 				margin-top: 30px;
 				margin-right: 10px;
 				width: 250px;
 				border-radius: 20px;
 				box-shadow: 0 0 5px 5px silver;
-				background: rgb(163,91,206);
+				background: $c-purple;
 
-				@media (min-width: 476px) {
+				@media (min-width: 477px) {
 					width: 200px;
 				}
 
 				@media (min-width: 992px) {
+					position: static;
 					display: flex;
 					align-items: center;
 					justify-content: space-around;
@@ -165,7 +160,7 @@
 						cursor: pointer;
 						display: block;
 						padding: 12px 24px;
-						transition: all .3s linear;
+						transition: background-color, transform .3s linear;
 
 						@media (min-width: 992px) {
 							padding: 0;
@@ -173,7 +168,7 @@
 
 
 						&:hover {
-							background-color: rgb(76,49,182);
+							background-color: $c-blue;
 
 							@media (min-width: 992px) {
 								background-color: unset;
@@ -183,6 +178,59 @@
 					}
 				}
 			}
+		}
+	}
+
+	&__button {
+		border-color: rgba(255, 255, 255, .6);
+		@include font("SourceSansPro-Regular", 16, 600, white);
+		@extend %button;
+
+		@media (min-width: 992px) {
+			margin-left: 10px;
+		}
+
+		&:hover {
+			background: $c-orange;
+			color: white;
+			border-color: transparent;
+			transform: scale(1.05);
+		}
+	}
+}
+
+.banner__content {
+	margin-top: 100px;
+
+	@media (min-width: 768px) {
+		margin-top: 170px;
+	}
+
+	&-top {
+		text-transform: uppercase;
+		@include font("Poppins-Bold", 16, 500, white);
+	}
+
+	&-title {
+		margin: 23px 0;
+		@include font("Poppins-Bold", 30, 700, white);
+
+		@media (min-width: 576px) {
+			@include font("Poppins-Bold", 56, 700, white);
+		}
+	}
+
+	&-button {
+		background: $c-orange;
+		border-color: transparent;
+		@include font("SourceSansPro-Regular", 16, 600, white);
+		@extend %button;
+
+		&:hover {
+			background: transparent;
+			color: white;
+			border-color: rgba(255, 255, 255, .6);
+			transform: scale(1.05);
 		}
 	}
 }
