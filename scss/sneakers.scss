@@ -10,7 +10,7 @@
 
 	&__info {
 		margin-bottom: 48px;
-		padding: 15px;
+
 			@media (min-width: 768px) {
 				margin-bottom: 0;
 			}
@@ -35,14 +35,11 @@
 		}
 
 		&Button {
-			width: 170px;
-			height: 48px;
 			margin-bottom: 5px;
 			background: $c-purple;
-			border-radius: 24px;
 			border-color: transparent;
 			@include font("SourceSansPro-Regular", 16, 700, white);
-			transition: all .2s linear;
+			@extend %button;
 
 			&:hover {
 				background: transparent;
@@ -53,47 +50,35 @@
 		}
 	}
 
-	&__product {
+	&__productWrapper {
 		display: flex;
 		align-self: flex-end;
+
+		@media (min-width: 576px) {
+			align-self: center;
+		}
+	}
+
+	&__product {
+		display: flex;
 		flex-direction: column;
-		width: 315px;
-		padding: 0;
 		margin-right: 15px;
 		background: linear-gradient(to left bottom, $c-purple, $c-blue);
 
 		@media (min-width: 576px) {
 			margin-right: 0;
-			align-self: center;
-			width: 380px;
-		}
-
-		@media (min-width: 768px) {
-			margin-right: 0;
-			width: 450px;
-		}
-
-		@media (min-width: 992px) {
-			width: 470px;
 		}
 
 		@media (min-width: 1200px) {
 			flex-direction: row;
-			width: 740px;
 		}
 
 		&Image {
 			transition: transform .3s linear;
-			align-self: flex-end;
-			flex: 0 0 315px;
+			transform: translate(-30px, -30px);
 
-
-			@media (min-width: 576px) {
-				flex: 0 0 380px;
-			}
-
-			@media (min-width: 768px) {
-				flex: 0 0 450px;
+			@media (min-width: 375px) {
+				transform: none;
 			}
 
 			@media (min-width: 992px) {
@@ -104,15 +89,19 @@
 				@media (min-width: 375px) {
 					transform: translate(-30px, -30px);
 				}
+			}
 
-				@media (min-width: 576px) {
-					transform: translate(-30px, -30px);
-				}
+			& img {
+				width: 100%;
 			}
 		}
 
 		&Desc {
-			padding: 23px;
+			padding: 25px;
+
+			@media (min-width: 1200px) {
+				padding: 25px 25px 0px 25px;
+			}
 
 			&Title {
 				line-height: 48px;

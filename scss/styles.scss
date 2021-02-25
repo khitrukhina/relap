@@ -58,3 +58,16 @@ html {
 		font-size: 20px;
 	}
 }
+
+.circle_small {
+	@extend %circle_small;
+}
+
+.circle_medium {
+	@extend %circle_medium;
+}
+
+.circle_big {
+	@extend %circle_big;
+	z-index: 0;
+}

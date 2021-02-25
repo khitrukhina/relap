@@ -9,3 +9,36 @@ $c-orange: #FFC300;
 	font-weight: $font-weight;
 	color: $color;
 }
+
+@mixin circle($height, $width, $position: absolute, $background: linear-gradient(to left bottom, $c-purple, $c-blue), $border-radius: 50%) {
+	height: $height + px;
+	width: $width + px;
+	position: $position;
+	background: $background;
+	border-radius: $border-radius;
+}
+
+%circle_small {
+	@include circle(100, 100);
+	right: 40%;
+	top: -48px;
+}
+
+%circle_medium {
+	@include circle(140, 140);
+	left: -59px;
+	bottom: -69px;
+}
+
+%circle_big {
+	@include circle(323, 323);
+	left: 65%;
+	bottom: -22%;
+}
+
+%button {
+	width: 170px;
+	height: 48px;
+	border-radius: 24px;
+	transition: all .2s linear;
+}

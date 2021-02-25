@@ -112,7 +112,7 @@
 					width: 100%;
 					height: 2px;
 					background-color: white;
-					transition: all .3s linear;
+					transition: .3s linear;
 				}
 
 				& > span::before {
@@ -160,7 +160,7 @@
 						cursor: pointer;
 						display: block;
 						padding: 12px 24px;
-						transition: all .3s linear;
+						transition: background-color, transform .3s linear;
 
 						@media (min-width: 992px) {
 							padding: 0;
@@ -182,12 +182,9 @@
 	}
 
 	&__button {
-		width: 170px;
-		height: 48px;
 		border-color: rgba(255, 255, 255, .6);
-		border-radius: 24px;
 		@include font("SourceSansPro-Regular", 16, 600, white);
-		transition: all .2s linear;
+		@extend %button;
 
 		@media (min-width: 992px) {
 			margin-left: 10px;
@@ -197,6 +194,7 @@
 			background: $c-orange;
 			color: white;
 			border-color: transparent;
+			transform: scale(1.05);
 		}
 	}
 }
@@ -223,14 +221,10 @@
 	}
 
 	&-button {
-		width: 170px;
-		height: 48px;
-		margin-bottom: 5px;
 		background: $c-orange;
-		border-radius: 24px;
 		border-color: transparent;
 		@include font("SourceSansPro-Regular", 16, 600, white);
-		transition: all .2s linear;
+		@extend %button;
 
 		&:hover {
 			background: transparent;
